@@ -23,11 +23,11 @@ export default function DropDownBox({ parametrs, setParametrs }) {
         setParametrs={setParametrs}
         type={"Typography"}
       />
-      {/* <Dropdown
+      <Dropdown
         parametrs={parametrs}
         setParametrs={setParametrs}
         type={"Icons"}
-      /> */}
+      />
     </div>
   );
 }
