@@ -1,5 +1,7 @@
 import { useTheme } from "../../ThemeContext.jsx";
 import InfoBoxes from "../InfoBoxes/InfoBoxes.jsx";
+import PalleteBoxes from "../PaletteBoxes/PaletteBoxes.jsx";
+import PreviewBox from "../PreviewBox/PreviewBox.jsx";
 
 export default function SideCard({ localTheme, setParametrs }) {
   const { theme, changeTheme } = useTheme();
@@ -9,7 +11,7 @@ export default function SideCard({ localTheme, setParametrs }) {
   } = theme;
   return (
     <div
-      className={`w-full h-full bg-white px-[24px] py-[32px] flex flex-col gap-[42px] ${borderWidth} ${borderRadius}`}
+      className={`w-full h-full bg-white px-[35px] py-[32px] ${borderWidth} ${borderRadius}`}
     >
       <h3
         style={{ fontFamily: typography }}
@@ -17,7 +19,9 @@ export default function SideCard({ localTheme, setParametrs }) {
       >
         Brand palette
       </h3>
-      <InfoBoxes localTheme={localTheme} />
+      <InfoBoxes />
+      <PalleteBoxes localTheme={localTheme} />
+      <PreviewBox localTheme={localTheme} />
     </div>
   );
 }

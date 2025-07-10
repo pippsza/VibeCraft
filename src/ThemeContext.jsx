@@ -10,9 +10,9 @@ export const ThemeProvider = ({ children }) => {
       return generateTheme(
         "playful",
         "fintech",
-        "youth",
-        "fourthFont",
-        "fourthIcons"
+        "adults",
+        "firstFont",
+        "firstIcons"
       );
     } catch (error) {
       console.error("Error generating theme:", error);

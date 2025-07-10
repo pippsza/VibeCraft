@@ -34,7 +34,7 @@ export default function MainMenu() {
   }, [parametrs]);
 
   return (
-    <Container style="h-[703px] grid gap-[18px] grid-cols-2 grid-cols-[380px_1fr] bg-red-500 ">
+    <Container style="h-[703px] grid gap-[18px] grid-cols-2 grid-cols-[380px_1fr] ">
       <Settings
         changeThemeHandler={changeThemeHandler}
         parametrs={parametrs}

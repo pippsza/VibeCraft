@@ -33,14 +33,21 @@ export default function Navlist() {
         className="  flex gap-[48px] items-center justify-center text-[18px]"
       >
         <li>
-          <a href="">Home</a>
+          <a
+            className="relative after:absolute after:bottom-0 after:w-[100%]
+            after:h-[1px] after:bg-black after:left-0 after:content-['']"
+            href=""
+          >
+            Home
+          </a>
         </li>
         <li>
-          <a href="">Templates</a>
+          <div className="flex gap-[28px]">
+            <a href="">Templates</a>
+            <a href="">Explore</a>
+          </div>
         </li>
-        <li>
-          <a href="">Explore</a>
-        </li>
+
         <li>
           <a href="">About Us</a>
         </li>
