@@ -15,17 +15,17 @@ export default function Navlist() {
       transition,
     },
   } = theme;
-  console.log(
-    typography,
-    background,
-    palette,
-    borderWidth,
-    borderRadius,
-    boxShadow,
-    focusRing,
-    hoverShadow,
-    transition
-  );
+  // console.log(
+  //   typography,
+  //   background,
+  //   palette,
+  //   borderWidth,
+  //   borderRadius,
+  //   boxShadow,
+  //   focusRing,
+  //   hoverShadow,
+  //   transition
+  // );
   return (
     <div className="">
       <ul

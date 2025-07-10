@@ -1,17 +1,11 @@
 import { useTheme } from "../../ThemeContext.jsx";
-import Dropdown from "../DropDownElement/DropDownElement.jsx";
+import DropDownBox from "../DropDownBox/DropDownBox.jsx";
 
-export default function Settings() {
-  const { theme, changeTheme } = useTheme();
+export default function Settings({ parametrs, setParametrs }) {
+  const { theme } = useTheme();
   const {
     typography,
-    styleUtils: {
-      borderRadius,
-      borderWidth,
-      boxShadow,
-      hoverShadow,
-      transition,
-    },
+    styleUtils: { borderRadius, borderWidth },
   } = theme;
 
   return (
@@ -20,10 +14,7 @@ export default function Settings() {
       className={`w-full h-full bg-white px-[24px] py-[32px] flex flex-col gap-[42px] ${borderWidth} ${borderRadius}`}
     >
       <h3 className="font-semibold text-[18px] ">Brand Parameters</h3>
-      <div className="flex flex-col gap-[22px]">
-        <Dropdown type={"Style"} />
-        <Dropdown type={"Category"} />
-      </div>
+      <DropDownBox parametrs={parametrs} setParametrs={setParametrs} />
       <button className="hover:cursor-pointer h-[40px] text-[#f9f9f9] bg-[#121212] ">
         Generate Branding
       </button>

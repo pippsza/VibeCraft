@@ -3,8 +3,9 @@ import { styleOptions, colors } from "../../tools/stylesCfg.js";
 import { Listbox } from "@headlessui/react";
 import { useTheme } from "../../ThemeContext.jsx";
 import { iconStyleMap } from "../../tools/socialIconMap.js";
-export default function StyleDropdown({ type }) {
+export default function StyleDropdown({ type, setParametrs, parametrs }) {
   const { theme, changeTheme, icons } = useTheme();
+  const [combinatedStyle, setCombinatedStyle] = useState(false);
   const iconsMapped = iconStyleMap[icons] || iconStyleMap["EmojiStyle"];
   let keys;
 
@@ -15,6 +16,14 @@ export default function StyleDropdown({ type }) {
     case "Category":
       keys = Object.keys(colors);
       break;
+    case "Audience":
+      keys = Object.keys(colors[parametrs.Category]).filter(
+        (key) => typeof colors[parametrs.Category][key] === "object"
+      );
+      break;
+    case "Typography":
+      keys = Object.keys(styleOptions[parametrs.Style]["typography"]);
+      break;
     default:
       break;
   }
@@ -24,24 +33,11 @@ export default function StyleDropdown({ type }) {
   const handleChange = (value) => {
     setSelectedStyle(value);
     console.log("selected:", value);
+    setParametrs({ ...parametrs, [type]: value });
     // onChange(value);
   };
 
   return (
-    // <div className="mb-4">
-    //   <label className="mb-[5px] text-[15px] tracking-[-0.02em]">Style</label>
-    //   <select
-    //     value={selectedStyle}
-    //     onChange={handleChange}
-    //     className="p-2 border border-gray-300 rounded w-full"
-    //   >
-    //     {keys.map((styleKey) => (
-    //       <option key={styleKey} value={styleKey}>
-    //         {styleKey}
-    //       </option>
-    //     ))}
-    //   </select>
-    //   </div>
     <div className="w-64">
       <Listbox value={selectedStyle} onChange={handleChange}>
         <p className="mb-[5px] text-[15px] tracking-[-0.02em]">{type}</p>
