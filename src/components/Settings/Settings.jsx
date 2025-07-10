@@ -20,8 +20,9 @@ export default function Settings() {
       className={`w-full h-full bg-white px-[24px] py-[32px] flex flex-col gap-[42px] ${borderWidth} ${borderRadius}`}
     >
       <h3 className="font-semibold text-[18px] ">Brand Parameters</h3>
-      <div>
-        <Dropdown type={"style"} />
+      <div className="flex flex-col gap-[22px]">
+        <Dropdown type={"Style"} />
+        <Dropdown type={"Category"} />
       </div>
       <button className="hover:cursor-pointer h-[40px] text-[#f9f9f9] bg-[#121212] ">
         Generate Branding
