@@ -3,7 +3,7 @@ import InfoBoxes from "../InfoBoxes/InfoBoxes.jsx";
 import PalleteBoxes from "../PaletteBoxes/PaletteBoxes.jsx";
 import PreviewBox from "../PreviewBox/PreviewBox.jsx";
 
-export default function SideCard({ localTheme, setParametrs }) {
+export default function SideCard({ localTheme, setParametrs, parametrs }) {
   const { theme, changeTheme } = useTheme();
   const {
     typography,
@@ -21,7 +21,7 @@ export default function SideCard({ localTheme, setParametrs }) {
       </h3>
       <InfoBoxes />
       <PalleteBoxes localTheme={localTheme} />
-      <PreviewBox localTheme={localTheme} />
+      <PreviewBox localTheme={localTheme} parametrs={parametrs} />
     </div>
   );
 }

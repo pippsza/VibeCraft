@@ -40,7 +40,11 @@ export default function MainMenu() {
         parametrs={parametrs}
         setParametrs={setParametrs}
       />
-      <SideCard localTheme={localTheme} setParametrs={setParametrs} />
+      <SideCard
+        localTheme={localTheme}
+        setParametrs={setParametrs}
+        parametrs={parametrs}
+      />
     </Container>
   );
 }

@@ -1,15 +1,27 @@
 import { iconStyleMap } from "../../tools/socialIconMap.js";
+import { styleOptions } from "../../tools/stylesCfg.js";
+import { useState, useEffect } from "react";
 
-export default function PreviewBox({ localTheme }) {
-  const { palette, icons } = localTheme;
+export default function PreviewBox({ localTheme, parametrs }) {
+  const { palette, icons, typography } = localTheme;
   console.log("LOCAL:", localTheme);
-  const iconsMapped = iconStyleMap[icons] || iconStyleMap["EmojiStyle"];
+  const [localIcons, setLocalIcons] = useState(icons);
+  useEffect(() => {
+    setLocalIcons(parametrs.Icon);
+  }, [parametrs.Icon]);
+  const iconStyleName =
+    styleOptions[parametrs.Style].icons[localIcons] || "EmojiStyle";
+  const iconsMapped = iconStyleMap[iconStyleName] || iconStyleMap["EmojiStyle"];
+
   return (
     <div className=" bg-white flex flex-col gap-[15px]">
       <h3 className="text-[#7e7e7e] uppercase text-[15px] leading-[142%]">
         preview
       </h3>
-      <div className="w-[533px] h-[162px] rounded-[10px] border-[1px] border-[#efefef] pt-[31px] px-[33px]">
+      <div
+        style={{ fontFamily: typography }}
+        className="w-[533px] h-[162px] rounded-[10px] border-[1px] border-[#efefef] pt-[31px] px-[33px]"
+      >
         <h2 className="mb-[6px] font-semibold text-[18px] tracking-[-0.02em] leading-[115%]">
           Header Example
         </h2>
@@ -29,8 +41,17 @@ export default function PreviewBox({ localTheme }) {
           >
             Secondary
           </button>
+          {iconsMapped.github && (
+            <iconsMapped.github className="stroke-black" size={20} />
+          )}
           {iconsMapped.discord && (
             <iconsMapped.discord className="stroke-black" size={20} />
+          )}
+          {iconsMapped.twitter && (
+            <iconsMapped.twitter className="stroke-black" size={20} />
+          )}
+          {iconsMapped.reddit && (
+            <iconsMapped.reddit className="stroke-black" size={20} />
           )}
         </div>
       </div>
