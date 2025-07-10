@@ -1,9 +1,9 @@
 import Container from "../Container/Container.jsx";
 
-export default function BackCircles({ children }) {
+export default function BackCircles() {
   return (
-    <Container style="absolute top-0 left-0 ">
-      <div className="bg-red-600 ">{children}</div>
+    <Container style=" ">
+      <div className="-z-10 absolute bg-green-700 w-full h-full"></div>
     </Container>
   );
 }

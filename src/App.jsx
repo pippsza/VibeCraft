@@ -11,7 +11,7 @@ function App() {
       <Header />
       <HeroSection />
       <MainMenu />
-      <BackCircles></BackCircles>
+      <BackCircles />
 
       <p>test</p>
     </div>
