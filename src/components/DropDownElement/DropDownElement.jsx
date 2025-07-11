@@ -39,7 +39,7 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
   };
 
   return (
-    <div className="w-[70%]">
+    <div className="w-[100%]">
       <Listbox value={selectedStyle} onChange={handleChange}>
         <p className="mb-[5px] text-[15px] tracking-[-0.02em]">{type}</p>
         <div className="relative">
