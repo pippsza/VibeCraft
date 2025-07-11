@@ -35,7 +35,6 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
 
   const handleChange = (value) => {
     setSelectedStyle(value);
-    console.log("selected:", value);
     setParametrs({ ...parametrs, [type]: value });
   };
 

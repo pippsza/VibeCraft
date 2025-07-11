@@ -21,8 +21,6 @@ export default function MainMenu() {
 
   const [localTheme, setLocalTheme] = useState(changeLocalThemeHandler());
 
-  console.log(localTheme, "localtheme");
-
   const changeThemeHandler = () => {
     const { Style, Audience, Category, Icon, Typography } = parametrs;
 
@@ -34,19 +32,17 @@ export default function MainMenu() {
   }, [parametrs]);
 
   return (
-    <div className="h-[703px] w-[1034px] m-auto mb-[200px]">
-      <div className="flex gap-[18px] h-full">
-        <Settings
-          changeThemeHandler={changeThemeHandler}
-          parametrs={parametrs}
-          setParametrs={setParametrs}
-        />
-        <SideCard
-          localTheme={localTheme}
-          setParametrs={setParametrs}
-          parametrs={parametrs}
-        />
-      </div>
+    <div className="w-full flex flex-col gap-2 px-2 mb-8 h-full lg:w-[1034px] lg:h-[703px] lg:px-[20px] lg:mb-[200px] lg:flex-row">
+      <Settings
+        changeThemeHandler={changeThemeHandler}
+        parametrs={parametrs}
+        setParametrs={setParametrs}
+      />
+      <SideCard
+        localTheme={localTheme}
+        setParametrs={setParametrs}
+        parametrs={parametrs}
+      />
     </div>
   );
 }

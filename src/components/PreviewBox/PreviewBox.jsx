@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 export default function PreviewBox({ localTheme, parametrs }) {
   const { palette, icons, typography } = localTheme;
-  console.log("LOCAL:", localTheme);
   const [localIcons, setLocalIcons] = useState(icons);
   useEffect(() => {
     setLocalIcons(parametrs.Icon);
@@ -14,13 +13,13 @@ export default function PreviewBox({ localTheme, parametrs }) {
   const iconsMapped = iconStyleMap[iconStyleName] || iconStyleMap["EmojiStyle"];
 
   return (
-    <div className=" bg-white flex flex-col gap-[15px]">
+    <div className="w-full flex flex-col gap-2 mb-2 bg-white  lg:gap-[15px] lg:mb-0">
       <h3 className="text-[#7e7e7e] uppercase text-[15px] leading-[142%]">
         preview
       </h3>
       <div
         style={{ fontFamily: typography }}
-        className="w-full h-[162px] rounded-[10px] border-[1px] border-[#efefef] pt-[31px] px-[33px]"
+        className="rounded-[10px] border-[1px] border-[#efefef] w-full h-[162px] bg-white rounded-[10px] pt-[31px] px-[33px]"
       >
         <h2 className="mb-[6px] font-semibold text-[18px] tracking-[-0.02em] leading-[115%]">
           Header Example
