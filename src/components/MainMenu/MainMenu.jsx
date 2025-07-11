@@ -34,7 +34,7 @@ export default function MainMenu() {
   }, [parametrs]);
 
   return (
-    <div className="h-[703px] w-[1034px] m-auto">
+    <div className="h-[703px] w-[1034px] m-auto mb-[200px]">
       <div className="flex gap-[18px] h-full">
         <Settings
           changeThemeHandler={changeThemeHandler}

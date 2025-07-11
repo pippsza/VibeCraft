@@ -11,7 +11,6 @@ function App() {
       <Header />
       <HeroSection />
       <MainMenu />
-      <p>test</p>
     </BackgroundWrapper>
   );
 }
