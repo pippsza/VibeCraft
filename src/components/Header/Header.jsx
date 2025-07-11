@@ -5,8 +5,8 @@ import Navlist from "../Navlist/Navlist.jsx";
 
 export default function Header() {
   return (
-    <header className="flex justify-center py-12 ">
-      <Container style="flex justify-between">
+    <header className="flex justify-center py-12 bg-transparent">
+      <Container style="flex justify-between w-[960px]">
         <Logo />
         <Navlist />
         <Icons />
