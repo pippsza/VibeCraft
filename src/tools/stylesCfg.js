@@ -3,7 +3,7 @@ export const styleOptions = {
     typography: {
       firstFont: "Fredoka",
       secondFont: "Comic Neue",
-      thirdFont: "Baloo 2",
+      thirdFont: "Rubik",
       fourthFont: "Kalam",
     },
     icons: {
@@ -60,44 +60,44 @@ export const styleOptions = {
 export const colors = {
   fintech: {
     accent: "#f15bb5",
-    secondary: "#fee440",
+    secondary: "#9d4edd",
     background: "#f7f7ff",
     adults: {
-      accent: "#f15bb5",
-      secondary: "#22223b",
+      accent: "#4eddeb",
+      secondary: "#f1a14e",
     },
     youth: {
-      accent: "#fee440",
-      secondary: "#22223b",
+      accent: "#d34ee8",
+      secondary: "#b14ed9",
     },
     professionals: {
-      accent: "#3a86ff",
-      secondary: "#ffbe0b",
+      accent: "#4ef15b",
+      secondary: "#4e9df1",
     },
     seniors: {
-      accent: "#8338ec",
-      secondary: "#ff006e",
+      accent: "#582775",
+      secondary: "#331329",
     },
   },
   fashion: {
-    accent: "#ffb4a2",
-    secondary: "#6d6875",
+    accent: "#B7B1F2",
+    secondary: "#FDB7EA",
     background: "#f8edeb",
     adults: {
-      accent: "#e5989b",
-      secondary: "#b5838d",
+      accent: "#B1F2E4",
+      secondary: "#F2DCB1",
     },
     youth: {
-      accent: "#ffb4a2",
-      secondary: "#6d6875",
+      accent: "#A077B1",
+      secondary: "#F2B1B1",
     },
     professionals: {
-      accent: "#9d4edd",
-      secondary: "#f15bb5",
+      accent: "#B1F2B7",
+      secondary: "#B1C3F2",
     },
     seniors: {
-      accent: "#f4a261",
-      secondary: "#e76f51",
+      accent: "#3D305A",
+      secondary: "#5A2C48",
     },
   },
   food: {
@@ -105,20 +105,20 @@ export const colors = {
     secondary: "#ff595e",
     background: "#f6f7eb",
     adults: {
-      accent: "#ffb627",
-      secondary: "#8ac926",
+      accent: "#FFCAAF",
+      secondary: "#8C1C13",
     },
     youth: {
-      accent: "#8ac926",
-      secondary: "#1982c4",
+      accent: "#3A86FF",
+      secondary: "#8338EC",
     },
     professionals: {
-      accent: "#ff595e",
-      secondary: "#6a4c93",
+      accent: "#FFD6A5",
+      secondary: "#FDFFB6",
     },
     seniors: {
-      accent: "#f4a261",
-      secondary: "#e76f51",
+      accent: "#14213D",
+      secondary: "#FCA311",
     },
   },
   travel: {
@@ -126,20 +126,20 @@ export const colors = {
     secondary: "#8338ec",
     background: "#f1faee",
     adults: {
-      accent: "#ffbe0b",
-      secondary: "#ff006e",
+      accent: "#00F5D4",
+      secondary: "#FF006E",
     },
     youth: {
-      accent: "#8338ec",
-      secondary: "#3a86ff",
+      accent: "#B8C0FF",
+      secondary: "#CDB4DB",
     },
     professionals: {
-      accent: "#06d6a0",
-      secondary: "#118ab2",
+      accent: "#2B2D42",
+      secondary: "#8D99AE",
     },
     seniors: {
-      accent: "#ff006e",
-      secondary: "#8338ec",
+      accent: "#FB5607",
+      secondary: "#FFBE0B",
     },
   },
 };

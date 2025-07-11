@@ -43,13 +43,19 @@ export default function Navlist() {
         </li>
         <li>
           <div className="flex gap-[28px]">
-            <a href="">Templates</a>
-            <a href="">Explore</a>
+            <a href="" className="hover:text-[#767676] transition">
+              Templates
+            </a>
+            <a href="" className="hover:text-[#767676] transition">
+              Explore
+            </a>
           </div>
         </li>
 
         <li>
-          <a href="">About Us</a>
+          <a href="" className="hover:text-[#767676] transition">
+            About Us
+          </a>
         </li>
       </ul>
     </div>

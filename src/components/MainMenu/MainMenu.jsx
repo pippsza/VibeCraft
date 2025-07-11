@@ -10,7 +10,7 @@ export default function MainMenu() {
   const [parametrs, setParametrs] = useState({
     Style: "classic",
     Category: "fashion",
-    Audience: "professionals",
+    Audience: "youth",
     Typography: "fourthFont",
     Icon: "thirdIcons",
   });

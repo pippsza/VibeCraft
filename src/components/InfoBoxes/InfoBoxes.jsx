@@ -18,7 +18,10 @@ export default function InfoBoxes() {
             <p className="text-[#7e7e7e] leading-[152%] font-semibold">
               TYPOGRAPHY
             </p>
-            <a className="text-[12px] leading-[177%] font-medium" href="">
+            <a
+              className="text-[12px] leading-[177%] font-medium transition hover:text-[#767676]"
+              href=""
+            >
               Find Font
             </a>
           </div>
@@ -29,7 +32,10 @@ export default function InfoBoxes() {
             <p className="text-[#7e7e7e] leading-[152%] font-semibold">
               ICON STYLE
             </p>
-            <a className="text-[12px] leading-[177%] font-medium" href="">
+            <a
+              className="text-[12px] leading-[177%] font-medium transition hover:text-[#767676]"
+              href=""
+            >
               Browse Icons
             </a>
           </div>

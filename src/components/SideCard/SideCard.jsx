@@ -20,7 +20,11 @@ export default function SideCard({ localTheme, setParametrs, parametrs }) {
         Brand palette
       </h3>
       <InfoBoxes />
-      <PalleteBoxes localTheme={localTheme} />
+      <PalleteBoxes
+        localTheme={localTheme}
+        setParametrs={setParametrs}
+        parametrs={parametrs}
+      />
       <PreviewBox localTheme={localTheme} parametrs={parametrs} />
     </div>
   );

@@ -31,27 +31,95 @@ export default function PreviewBox({ localTheme, parametrs }) {
         <div className="flex gap-[9px] ">
           <button
             style={{ backgroundColor: palette[0] }}
-            className="w-[142px] hover:cursor-pointer h-[35px] text-[15px] tracking-[-0.02em] leading-[142%] font-semibold rounded-[10px] text-white"
+            className="w-[142px] hover:cursor-pointer h-[35px] text-[15px] tracking-[-0.02em] leading-[142%] font-semibold rounded-[10px] text-white transition"
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.backgroundColor = palette[0] + "CC")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.backgroundColor = palette[0])
+            }
           >
             Primary
           </button>
           <button
-            style={{ color: palette[1], borderColor: palette[1] }}
-            className="w-[142px] hover:cursor-pointer h-[35px] text-[15px] tracking-[-0.02em] leading-[142%] font-semibold rounded-[10px] border-[1px]"
+            style={{
+              color: palette[1],
+              borderColor: palette[1],
+              backgroundColor: palette[1] + "10",
+            }}
+            className="w-[142px] hover:cursor-pointer h-[35px] text-[15px] tracking-[-0.02em] leading-[142%] font-semibold rounded-[10px] border-[1px] transition"
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.backgroundColor = palette[1] + "20")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.backgroundColor = palette[1] + "10")
+            }
           >
             Secondary
           </button>
           {iconsMapped.github && (
-            <iconsMapped.github className="stroke-black" size={20} />
+            <span
+              onMouseEnter={(e) =>
+                (e.currentTarget.firstChild.style.stroke = palette[0])
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.firstChild.style.stroke = "#000")
+              }
+              className="rounded-full p-1 transition flex items-center"
+            >
+              <iconsMapped.github
+                className="stroke-black transition hover:cursor-pointer"
+                size={20}
+              />
+            </span>
           )}
           {iconsMapped.discord && (
-            <iconsMapped.discord className="stroke-black" size={20} />
+            <span
+              onMouseEnter={(e) =>
+                (e.currentTarget.firstChild.style.stroke = palette[0])
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.firstChild.style.stroke = "#000")
+              }
+              className="rounded-full p-1 transition flex items-center"
+            >
+              <iconsMapped.discord
+                className="stroke-black transition hover:cursor-pointer"
+                size={20}
+              />
+            </span>
           )}
           {iconsMapped.twitter && (
-            <iconsMapped.twitter className="stroke-black" size={20} />
+            <span
+              onMouseEnter={(e) =>
+                (e.currentTarget.firstChild.style.stroke = palette[0])
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.firstChild.style.stroke = "#000")
+              }
+              className="rounded-full p-1 transition flex items-center"
+            >
+              <iconsMapped.twitter
+                className="stroke-black transition hover:cursor-pointer"
+                size={20}
+              />
+            </span>
           )}
           {iconsMapped.reddit && (
-            <iconsMapped.reddit className="stroke-black" size={20} />
+            <span
+              onMouseEnter={(e) =>
+                (e.currentTarget.firstChild.style.stroke = palette[0])
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.firstChild.style.stroke = "#000")
+              }
+              className="rounded-full p-1 transition flex items-center"
+            >
+              <iconsMapped.reddit
+                className="stroke-black transition hover:cursor-pointer"
+                size={20}
+              />
+            </span>
           )}
         </div>
       </div>

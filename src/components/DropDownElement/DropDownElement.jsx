@@ -44,7 +44,7 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
       <Listbox value={selectedStyle} onChange={handleChange}>
         <p className="mb-[5px] text-[15px] tracking-[-0.02em]">{type}</p>
         <div className="relative">
-          <Listbox.Button className="relative w-full h-[35px] cursor-pointer bg-white border-[1px] border-solid rounded-[8px] border-[#efefef] text-left flex justify-between items-center px-[12px]">
+          <Listbox.Button className="relative w-full h-[35px] cursor-pointer bg-white border-[1px] border-solid rounded-[8px] border-[#efefef] text-left flex justify-between items-center px-[12px] transition hover:bg-[rgba(241,91,181,0.15)]">
             {type === "Typography"
               ? styleOptions[parametrs.Style]["typography"][selectedStyle]
               : type === "Icons"
@@ -63,16 +63,22 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
                 label = styleKey;
               }
               return (
-                <Listbox.Option
-                  key={styleKey}
-                  value={styleKey}
-                  className={({ active }) =>
-                    `cursor-pointer select-none px-4 py-2 ${
-                      active ? "bg-[#767676] text-black" : "text-[#767676]"
-                    }`
-                  }
-                >
-                  {label}
+                <Listbox.Option key={styleKey} value={styleKey}>
+                  {({ active }) => (
+                    <div
+                      style={
+                        active
+                          ? {
+                              backgroundColor: theme.palette[0] + "20",
+                              color: "#000",
+                            }
+                          : { color: "#767676" }
+                      }
+                      className="cursor-pointer select-none px-4 py-2 transition"
+                    >
+                      {label}
+                    </div>
+                  )}
                 </Listbox.Option>
               );
             })}

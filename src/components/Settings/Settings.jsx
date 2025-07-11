@@ -23,7 +23,7 @@ export default function Settings({
       <DropDownBox parametrs={parametrs} setParametrs={setParametrs} />
       <button
         onClick={changeThemeHandler}
-        className="rounded-[10px] hover:cursor-pointer h-[40px] text-[#f9f9f9] bg-[#121212] "
+        className="rounded-[10px] hover:cursor-pointer h-[40px] text-[#f9f9f9] bg-[#121212] hover:bg-[#767676] transition"
       >
         Generate Branding
       </button>
