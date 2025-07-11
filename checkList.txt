@@ -1,0 +1,9 @@
+CHANGE BOXES HIGHT 
+MAKE TWO BOXES IN grid
+make all tailwind without [ tailwind functions ]
+
+FOnts DONt WORK IN PROD. REMAKE BUTTON AND MAKE REAL TIME. MAKE WORKABLE ICONS
+watch some vids for tailwind container
+Make more grids ( at least make palletes via grids)
+REKAKE HTMl FontS TO CSS
+MAKE INITIAL SETTINGS IN BOX VIA STORED SETTINGS IN LOCALSTORADGE
