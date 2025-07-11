@@ -15,7 +15,7 @@ export default function Settings({
   return (
     <div
       style={{ fontFamily: typography }}
-      className={`w-full flex flex-col gap-2 px-2 py-2 mb-2 h-full bg-white font-medium ${borderWidth} ${borderRadius} lg:w-[379px] lg:px-[24px] lg:py-[32px] lg:gap-[42px]`}
+      className={`max-w-[400px] w-full flex flex-col gap-2 px-2 py-2 mb-2 h-full bg-white font-medium ${borderWidth} ${borderRadius} lg:w-[379px] lg:px-[24px] lg:py-[32px] lg:gap-[42px]`}
     >
       <h3 className="font-semibold text-base tracking-[-0.01em] lg:text-[18px] lg:tracking-[-0.02em]">
         Brand Parameters

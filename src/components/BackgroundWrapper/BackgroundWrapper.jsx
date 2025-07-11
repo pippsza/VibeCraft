@@ -10,7 +10,7 @@ export default function BackgroundWrapper({ children }) {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center">
-      <div className="absolute -z-10 w-[1200px] h-[1200px] top-0 left-1/2 transform -translate-x-1/2 overflow-hidden pointer-events-none">
+      <div className="absolute -z-10 w-[320px] h-[800px] lg:w-[1200px] lg:h-[1400px] top-0 left-1/2 transform -translate-x-1/2 overflow-hidden pointer-events-none">
         <svg
           width="100%"
           height="100%"

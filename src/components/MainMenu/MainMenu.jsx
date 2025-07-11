@@ -32,7 +32,7 @@ export default function MainMenu() {
   }, [parametrs]);
 
   return (
-    <div className="w-full flex flex-col gap-2 px-2 mb-8 h-[1550px] lg:w-[1034px] lg:h-[703px] lg:px-[20px] lg:mb-[200px] lg:flex-row">
+    <div className="w-full items-center  flex flex-col gap-2 px-2 mb-8 h-[1550px] lg:w-[1034px] lg:h-[703px] lg:px-[20px] lg:mb-[200px] lg:flex-row">
       <Settings
         changeThemeHandler={changeThemeHandler}
         parametrs={parametrs}
