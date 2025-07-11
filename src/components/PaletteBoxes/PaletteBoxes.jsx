@@ -17,7 +17,7 @@ export default function PalleteBoxes({ localTheme, setParametrs, parametrs }) {
   return (
     <div
       style={{ fontFamily: typography }}
-      className="flex flex-col w-[520px] gap-[13px] mb-[25px]"
+      className="flex flex-col w-full lg:w-[520px] gap-[13px] mb-[25px]"
     >
       <div className="flex justify-between">
         <h3 className="text-[#7e7e7e] uppercase text-[15px] leading-[142%]">

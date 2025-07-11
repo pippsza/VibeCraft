@@ -13,7 +13,7 @@ export default function PreviewBox({ localTheme, parametrs }) {
   const iconsMapped = iconStyleMap[iconStyleName] || iconStyleMap["EmojiStyle"];
 
   return (
-    <div className="w-full flex flex-col gap-2 mb-2 bg-white rounded-[10px] border-[1px] border-[#efefef] lg:gap-[15px] lg:mb-0">
+    <div className="w-full flex flex-col gap-2 mb-2 bg-white  lg:gap-[15px] lg:mb-0">
       <h3 className="text-[#7e7e7e] uppercase text-[13px] md:text-[15px] leading-[142%]">
         preview
       </h3>
