@@ -34,17 +34,19 @@ export default function MainMenu() {
   }, [parametrs]);
 
   return (
-    <Container style="h-[703px] grid gap-[18px] grid-cols-2 grid-cols-[380px_1fr] ">
-      <Settings
-        changeThemeHandler={changeThemeHandler}
-        parametrs={parametrs}
-        setParametrs={setParametrs}
-      />
-      <SideCard
-        localTheme={localTheme}
-        setParametrs={setParametrs}
-        parametrs={parametrs}
-      />
-    </Container>
+    <div className="h-[703px] w-[1034px] m-auto">
+      <div className="flex gap-[18px] h-full">
+        <Settings
+          changeThemeHandler={changeThemeHandler}
+          parametrs={parametrs}
+          setParametrs={setParametrs}
+        />
+        <SideCard
+          localTheme={localTheme}
+          setParametrs={setParametrs}
+          parametrs={parametrs}
+        />
+      </div>
+    </div>
   );
 }

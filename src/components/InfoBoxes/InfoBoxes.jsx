@@ -9,7 +9,7 @@ export default function InfoBoxes() {
   } = theme;
 
   const styleBox =
-    "bg-[#f9f9f9] w-[256px] h-[87px] px-[17px] py-[15px] rounded-[15px] flex flex-col justify-between";
+    "bg-[#f9f9f9] w-[50%] h-[87px] px-[17px] py-[15px] rounded-[15px] flex flex-col justify-between";
   return (
     <div className="mb-[16px]">
       <ul style={{ fontFamily: typography }} className="flex gap-[16px]">

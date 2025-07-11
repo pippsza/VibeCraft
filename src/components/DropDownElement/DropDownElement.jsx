@@ -40,11 +40,11 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
   };
 
   return (
-    <div className="w-64">
+    <div className="w-[70%]">
       <Listbox value={selectedStyle} onChange={handleChange}>
         <p className="mb-[5px] text-[15px] tracking-[-0.02em]">{type}</p>
         <div className="relative">
-          <Listbox.Button className="relative w-[210px] h-[35px] cursor-pointer bg-white border-[1px] border-solid rounded-[8px] border-[#efefef] text-left flex justify-between items-center px-[12px]">
+          <Listbox.Button className="relative w-full h-[35px] cursor-pointer bg-white border-[1px] border-solid rounded-[8px] border-[#efefef] text-left flex justify-between items-center px-[12px]">
             {type === "Typography"
               ? styleOptions[parametrs.Style]["typography"][selectedStyle]
               : type === "Icons"

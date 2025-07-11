@@ -8,7 +8,7 @@ export default function PalleteBoxes({ localTheme }) {
   return (
     <div
       style={{ fontFamily: typography }}
-      className="flex flex-col gap-[13px] mb-[25px]"
+      className="flex flex-col w-[520px] gap-[13px] mb-[25px]"
     >
       <div className="flex justify-between">
         <h3 className="text-[#7e7e7e] uppercase text-[15px] leading-[142%]">
@@ -33,7 +33,7 @@ export default function PalleteBoxes({ localTheme }) {
           return (
             <li
               key={i}
-              className="w-[168px] h-[106px] rounded-[10px] grid grid-rows-2 overflow-hidden"
+              className="w-[168px] h-[106px] rounded-[10px]  grid grid-rows-2 overflow-hidden"
             >
               <div style={{ backgroundColor: el }}></div>
               <div className="bg-[#f8f8f8] p-[11px]">

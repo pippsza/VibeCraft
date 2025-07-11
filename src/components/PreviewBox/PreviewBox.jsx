@@ -20,7 +20,7 @@ export default function PreviewBox({ localTheme, parametrs }) {
       </h3>
       <div
         style={{ fontFamily: typography }}
-        className="w-[533px] h-[162px] rounded-[10px] border-[1px] border-[#efefef] pt-[31px] px-[33px]"
+        className="w-full h-[162px] rounded-[10px] border-[1px] border-[#efefef] pt-[31px] px-[33px]"
       >
         <h2 className="mb-[6px] font-semibold text-[18px] tracking-[-0.02em] leading-[115%]">
           Header Example

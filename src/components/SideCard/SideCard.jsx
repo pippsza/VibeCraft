@@ -11,7 +11,7 @@ export default function SideCard({ localTheme, setParametrs, parametrs }) {
   } = theme;
   return (
     <div
-      className={`w-full h-full bg-white px-[35px] py-[32px] ${borderWidth} ${borderRadius}`}
+      className={`w-[589px] h-full bg-white px-[35px] py-[32px] ${borderWidth} ${borderRadius}`}
     >
       <h3
         style={{ fontFamily: typography }}
