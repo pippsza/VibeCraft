@@ -1,8 +1,9 @@
-export default function Star() {
+export default function Star({ size = 14, lgSize = 18 }) {
   return (
     <svg
-      width="18"
-      height="17"
+      width={size}
+      height={size - 1}
+      className={`inline-block lg:w-[${lgSize}px] lg:h-[${lgSize - 1}px]`}
       viewBox="0 0 18 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

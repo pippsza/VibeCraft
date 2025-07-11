@@ -8,12 +8,12 @@ export default function HeroSection() {
   const { typography } = theme;
 
   const avatarStyles =
-    "w-[45px] h-[45px] rounded-full border-2 border-white object-cover -ml-[10px] first:ml-0";
+    "w-[32px] h-[32px] rounded-full border-2 border-white object-cover -ml-2 first:ml-0 lg:w-[45px] lg:h-[45px] lg:-ml-[10px]";
 
   return (
-    <Container style="flex flex-col py-[68px] items-center">
-      <div className="flex mb-[27px]">
-        <div className="flex items-center mr-[17px]">
+    <Container style="flex flex-col items-center py-6  lg:py-[68px]">
+      <div className="flex mb-4 lg:mb-[27px] lg:flex-row items-center flex-col">
+        <div className="flex items-center mr-3 lg:mr-[17px]">
           <img src="/image.png" alt="avatar" className={avatarStyles} />
           <img src="/image-1.png" alt="avatar" className={avatarStyles} />
           <img src="/image-2.png" alt="avatar" className={avatarStyles} />
@@ -21,34 +21,35 @@ export default function HeroSection() {
           <img src="/image-4.png" alt="avatar" className={avatarStyles} />
         </div>
 
-        <div className="w-[1px] h-[53px] bg-[#dbdbdb] mr-[12px]"></div>
+        <div className="w-px h-[32px] bg-[#dbdbdb] mr-2 lg:w-[1px] lg:h-[53px] lg:mr-[12px] rotate-90 lg:rotate-0"></div>
         <div>
-          <div className="flex gap-[5px]">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
+          <div className="flex gap-1 lg:gap-[5px]">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} size={14} lgSize={18} />
+            ))}
           </div>
-          <p style={{ fontFamily: typography }} className="text-[#767676]">
+          <p
+            style={{ fontFamily: typography }}
+            className="text-[#767676] text-xs lg:text-base "
+          >
             Trusted by 20+ professionals & founders
           </p>
         </div>
       </div>
-      <div className="relative mb-[34px]">
+      <div className="relative mb-4 lg:mb-[34px]">
         <h1
           style={{ fontFamily: typography }}
-          className="text-[81px] text-center text-black tracking-tight font-semibold"
+          className="text-[32px] text-center text-black tracking-tight font-semibold leading-[1.1] lg:text-[81px]"
         >
           Design the Identity {<br />} Your Brand Deserves.
         </h1>
-        <div className="absolute bottom-[-8px] right-[300px]">
+        <div className="hidden lg:block absolute bottom-[-8px] right-[300px]">
           <Underline />
         </div>
       </div>
       <p
         style={{ fontFamily: typography }}
-        className="text-center tracking-[0.04em]"
+        className="text-center text-xs tracking-[0.01em] lg:text-base lg:tracking-[0.04em]"
       >
         Bring your brand to life with curated styles, colors, {<br />} fonts,
         and icons — all in one tool.
