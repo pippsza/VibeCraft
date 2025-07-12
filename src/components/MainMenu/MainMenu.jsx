@@ -6,7 +6,7 @@ import { useTheme } from "../../ThemeContext.jsx";
 import generateTheme from "../../tools/styleBuilder.js";
 
 export default function MainMenu() {
-  const { theme, changeTheme } = useTheme();
+  const { changeTheme } = useTheme();
   const [parametrs, setParametrs] = useState({
     Style: "classic",
     Category: "fashion",
@@ -32,7 +32,7 @@ export default function MainMenu() {
   }, [parametrs]);
 
   return (
-    <div className="w-full items-center  flex flex-col gap-2 px-2 mb-8 h-[1550px] lg:w-[1034px] lg:h-[703px] lg:px-[20px] lg:mb-[200px] lg:flex-row">
+    <div class="container max-w-[1000px] mx-auto px-4 lg:px-8 grid grid-cols-2 grid-cols-[1fr_2fr] gap-x-6 justify-start">
       <Settings
         changeThemeHandler={changeThemeHandler}
         parametrs={parametrs}

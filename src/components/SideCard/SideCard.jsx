@@ -4,19 +4,16 @@ import PalleteBoxes from "../PaletteBoxes/PaletteBoxes.jsx";
 import PreviewBox from "../PreviewBox/PreviewBox.jsx";
 
 export default function SideCard({ localTheme, setParametrs, parametrs }) {
-  const { theme, changeTheme } = useTheme();
+  const { theme } = useTheme();
   const {
     typography,
     styleUtils: { borderRadius, borderWidth },
   } = theme;
   return (
     <div
-      className={`max-w-[400px] lg:max-w-[2000px] w-full flex flex-col px-2 py-2 mt-2 h-full bg-white ${borderWidth} ${borderRadius} lg:w-[589px] lg:px-[35px] lg:py-[32px] lg:mt-0`}
+      className={`w-full   flex flex-col gap-5 px-8 py-4  bg-white ${borderWidth} ${borderRadius}  `}
     >
-      <h3
-        style={{ fontFamily: typography }}
-        className="font-semibold text-[18px] tracking-[-0.02em]"
-      >
+      <h3 style={{ fontFamily: typography }} className="font-semibold text-lg">
         Brand palette
       </h3>
       <InfoBoxes />

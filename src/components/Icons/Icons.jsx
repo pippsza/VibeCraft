@@ -20,7 +20,7 @@ export default function Icons() {
         {iconsMapped.github && (
           <iconsMapped.github
             className="transition"
-            size={20}
+            size={22}
             style={{ stroke: hovered === "github" ? accent : "#000" }}
           />
         )}
@@ -34,7 +34,7 @@ export default function Icons() {
         {iconsMapped.discord && (
           <iconsMapped.discord
             className="transition"
-            size={20}
+            size={22}
             style={{ stroke: hovered === "discord" ? accent : "#000" }}
           />
         )}
@@ -48,7 +48,7 @@ export default function Icons() {
         {iconsMapped.reddit && (
           <iconsMapped.reddit
             className="transition"
-            size={20}
+            size={22}
             style={{ stroke: hovered === "reddit" ? accent : "#000" }}
           />
         )}
@@ -62,7 +62,7 @@ export default function Icons() {
         {iconsMapped.twitter && (
           <iconsMapped.twitter
             className="transition"
-            size={20}
+            size={22}
             style={{ stroke: hovered === "twitter" ? accent : "#000" }}
           />
         )}

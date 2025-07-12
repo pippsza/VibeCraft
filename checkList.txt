@@ -7,3 +7,63 @@ watch some vids for tailwind container
 Make more grids ( at least make palletes via grids)
 REKAKE HTMl FontS TO CSS
 MAKE INITIAL SETTINGS IN BOX VIA STORED SETTINGS IN LOCALSTORADGE
+
+
+SM MD LG
+
+0 - 0px
+0.5 - 2px
+1 - 4px
+1.5 - 6px
+2 - 8px
+2.5 - 10px
+3 - 12px
+3.5 - 14px
+4 - 16px
+5 - 20px
+6 - 24px
+7 - 28px
+8 - 32px
+9 - 36px
+10 - 40px
+11 - 44px
+12 - 48px
+14 - 56px
+16 - 64px
+20 - 80px
+24 - 96px
+28 - 112px
+32 - 128px
+36 - 144px
+40 - 160px
+44 - 176px
+48 - 192px
+52 - 208px
+56 - 224px
+60 - 240px
+64 - 256px
+72 - 288px
+80 - 320px
+96 - 384px
+
+
+sm - 640px
+md - 768px
+lg - 1024px
+xl - 1280px
+2xl - 1536px
+
+
+text-xs   - font-size: 0.75rem (12px),   line-height: 1rem (16px)
+text-sm   - font-size: 0.875rem (14px),  line-height: 1.25rem (20px)
+text-base - font-size: 1rem (16px),      line-height: 1.5rem (24px)
+text-lg   - font-size: 1.125rem (18px),  line-height: 1.75rem (28px)
+text-xl   - font-size: 1.25rem (20px),   line-height: 1.75rem (28px)
+text-2xl  - font-size: 1.5rem (24px),    line-height: 2rem (32px)
+text-3xl  - font-size: 1.875rem (30px),  line-height: 2.25rem (36px)
+text-4xl  - font-size: 2.25rem (36px),   line-height: 2.5rem (40px)
+text-5xl  - font-size: 3rem (48px),      line-height: 1 (48px)
+text-6xl  - font-size: 3.75rem (60px),   line-height: 1 (60px)
+text-7xl  - font-size: 4.5rem (72px),    line-height: 1 (72px)
+text-8xl  - font-size: 6rem (96px),      line-height: 1 (96px)
+text-9xl  - font-size: 8rem (128px),     line-height: 1 (128px)

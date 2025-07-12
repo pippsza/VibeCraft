@@ -15,15 +15,13 @@ export default function Settings({
   return (
     <div
       style={{ fontFamily: typography }}
-      className={`max-w-[400px] w-full flex flex-col gap-2 px-2 py-2 mb-2 h-full bg-white font-medium ${borderWidth} ${borderRadius} lg:w-[379px] lg:px-[24px] lg:py-[32px] lg:gap-[42px]`}
+      className={` w-full flex flex-col gap-5 px-4 py-4 h-full  font-medium p-8 ${borderWidth} ${borderRadius}`}
     >
-      <h3 className="font-semibold text-base tracking-[-0.01em] lg:text-[18px] lg:tracking-[-0.02em]">
-        Brand Parameters
-      </h3>
+      <h3 className="font-semibold text-base lg:text-lg">Brand Parameters</h3>
       <DropDownBox parametrs={parametrs} setParametrs={setParametrs} />
       <button
         onClick={changeThemeHandler}
-        className="rounded-[8px] hover:cursor-pointer h-[36px] text-[#f9f9f9] bg-[#121212] hover:bg-[#767676] transition text-sm lg:rounded-[10px] lg:h-[40px] lg:text-base"
+        className="rounded-2 hover:cursor-pointer h-9 text-[#f9f9f9] bg-[#121212] hover:bg-[#767676] transition text-sm lg:rounded-xl lg:h-11 lg:text-base"
       >
         Generate Branding
       </button>

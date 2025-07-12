@@ -8,13 +8,12 @@ export default function InfoBoxes() {
     styleUtils: { borderRadius, borderWidth },
   } = theme;
 
-  const styleBox =
-    "bg-[#f9f9f9] w-[50%] h-[87px] px-[17px] py-[15px] rounded-[15px] flex flex-col justify-between";
+  const styleBox = `bg-[#f9f9f9] w-1/2  flex flex-col justify-between  ${borderRadius} ${borderWidth}`;
   return (
-    <div className="mb-[12px] lg:mb-[16px]">
+    <div>
       <ul
         style={{ fontFamily: typography }}
-        className="flex flex-col gap-2 lg:flex-row lg:gap-[16px]"
+        className="grid lg:grid-cols-2  gap-2 lg:flex-row lg:gap-[16px]"
       >
         <li
           className={

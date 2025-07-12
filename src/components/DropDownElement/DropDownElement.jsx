@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { styleOptions, colors } from "../../tools/stylesCfg.js";
 import { Listbox } from "@headlessui/react";
 import { useTheme } from "../../ThemeContext.jsx";
 import { iconStyleMap } from "../../tools/socialIconMap.js";
 export default function StyleDropdown({ type, setParametrs, parametrs }) {
-  const { theme, changeTheme, icons } = useTheme();
-  const [combinatedStyle, setCombinatedStyle] = useState(false);
+  const { theme } = useTheme();
+  const { icons } = theme;
   const iconsMapped = iconStyleMap[icons] || iconStyleMap["EmojiStyle"];
   let keys;
 
@@ -39,11 +39,11 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
   };
 
   return (
-    <div className="w-[100%]">
+    <div className="w-full flex flex-col gap-2">
       <Listbox value={selectedStyle} onChange={handleChange}>
-        <p className="mb-[5px] text-[15px] tracking-[-0.02em]">{type}</p>
+        <p className=" text-sm">{type}</p>
         <div className="relative">
-          <Listbox.Button className="relative w-full h-[35px] cursor-pointer bg-white border-[1px] border-solid rounded-[8px] border-[#efefef] text-left flex justify-between items-center px-[12px] transition hover:bg-[rgba(241,91,181,0.15)]">
+          <Listbox.Button className="relative w-full h-9 cursor-pointer bg-white border-px border-solid rounded-lg border-[#efefef] text-left flex justify-between items-center px-3 transition hover:bg-[rgba(241,91,181,0.15)]">
             {type === "Typography"
               ? styleOptions[parametrs.Style]["typography"][selectedStyle]
               : type === "Icons"
@@ -51,7 +51,7 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
               : selectedStyle}
             <iconsMapped.dropdown className="stroke-black" size={20} />
           </Listbox.Button>
-          <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-[8px] bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none">
+          <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none">
             {keys.map((styleKey) => {
               let label;
               if (type === "Typography") {
