@@ -11,7 +11,7 @@ export default function HeroSection() {
     "w-8 h-8 rounded-full border-2 border-white object-cover -ml-2 first:ml-0 lg:w-11 lg:h-11 lg:-ml-3";
 
   return (
-    <div className="container px-2 lg:px-4 mx-auto py-14 flex flex-col gap-4 lg:gap-10 ">
+    <div className="container max-w-[1024px] px-2 lg:px-4 mx-auto py-14 flex flex-col gap-4 lg:gap-10 ">
       <div className="flex  lg:gap-5 lg:flex-row items-center justify-center flex-col">
         <div className="flex items-center ">
           <img src="/image.png" alt="avatar" className={avatarStyles} />

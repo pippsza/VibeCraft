@@ -32,7 +32,7 @@ export default function MainMenu() {
   }, [parametrs]);
 
   return (
-    <div class="container max-w-[1000px] mx-auto px-4 lg:px-8 grid grid-cols-2 grid-cols-[1fr_2fr] gap-x-6 justify-start">
+    <div class="container max-w-[1024px] mx-auto px-4 lg:px-8 grid grid-cols-2 grid-cols-[1fr_2fr] gap-x-6 justify-start">
       <Settings
         changeThemeHandler={changeThemeHandler}
         parametrs={parametrs}
