@@ -1,10 +1,11 @@
 import { useTheme } from "../../ThemeContext.jsx";
+import { iconStyleMap } from "../../tools/socialIconMap.js";
 
 export default function PreviewBox() {
   const { theme } = useTheme();
   const { palette, icons, typography } = theme;
 
-  const iconsMapped = "EmojiStyle";
+  const iconsMapped = iconStyleMap[icons];
 
   return (
     <div className="w-full flex flex-col gap-2  bg-white  lg:gap-4 ">
