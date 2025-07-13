@@ -33,8 +33,10 @@ export default function MainMenu() {
       };
     }
   };
-
   const [parametrs, setParametrs] = useState(getInitialKeys);
+  useEffect(() => {
+    changeThemeHandler();
+  }, [parametrs]);
 
   const changeThemeHandler = () => {
     const { Style, Audience, Category, Icon, Typography } = parametrs;
@@ -44,11 +46,7 @@ export default function MainMenu() {
 
   return (
     <div className="container max-w-[1024px] mx-auto px-4 lg:px-8 grid mb-30 grid-rows-2 gap-y-6 lg:grid-cols-[1fr_2fr] gap-x-6 justify-center lg:justify-start">
-      <Settings
-        changeThemeHandler={changeThemeHandler}
-        parametrs={parametrs}
-        setParametrs={setParametrs}
-      />
+      <Settings parametrs={parametrs} setParametrs={setParametrs} />
       <SideCard setParametrs={setParametrs} parametrs={parametrs} />
     </div>
   );

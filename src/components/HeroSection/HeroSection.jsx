@@ -43,7 +43,7 @@ export default function HeroSection() {
         >
           Design the Identity {<br />} Your Brand Deserves.
         </h1>
-        <div className="hidden lg:block absolute -bottom-6 right-[500px]">
+        <div className="hidden lg:block absolute -bottom-6 right-102">
           <Underline />
         </div>
       </div>

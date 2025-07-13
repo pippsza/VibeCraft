@@ -1,11 +1,7 @@
 import { useTheme } from "../../ThemeContext.jsx";
 import DropDownBox from "../DropDownBox/DropDownBox.jsx";
 
-export default function Settings({
-  changeThemeHandler,
-  parametrs,
-  setParametrs,
-}) {
+export default function Settings({ parametrs, setParametrs }) {
   const { theme } = useTheme();
   const {
     typography,
@@ -20,7 +16,7 @@ export default function Settings({
       <h3 className="font-semibold text-base lg:text-lg">Brand Parameters</h3>
       <DropDownBox parametrs={parametrs} setParametrs={setParametrs} />
       <button
-        onClick={changeThemeHandler}
+        onClick={null}
         className="rounded-2 hover:cursor-pointer h-9 text-[#f9f9f9] bg-[#121212] hover:bg-[#767676] transition text-sm rounded-xl lg:h-11 lg:text-base"
       >
         Generate Branding

@@ -8,31 +8,36 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
   const { icons } = theme;
   const iconsMapped = iconStyleMap[icons] || iconStyleMap["EmojiStyle"];
   let keys;
-
+  let initialKey;
   switch (type) {
     case "Style":
       keys = Object.keys(styleOptions);
+      initialKey = parametrs.Style;
       break;
     case "Category":
       keys = Object.keys(colors);
+      initialKey = parametrs.Category;
       break;
     case "Audience":
       keys = Object.keys(colors[parametrs.Category]).filter(
         (key) => typeof colors[parametrs.Category][key] === "object"
       );
+      initialKey = parametrs.Audience;
       break;
     case "Typography":
       keys = Object.keys(styleOptions[parametrs.Style]["typography"]);
+      initialKey = parametrs.Typography;
       break;
     case "Icons":
       keys = Object.keys(styleOptions[parametrs.Style]["icons"]);
+      initialKey = parametrs.Icon;
       break;
     default:
       break;
   }
-
-  const [selectedStyle, setSelectedStyle] = useState(keys[0]);
-
+  const [selectedStyle, setSelectedStyle] = useState(initialKey);
+  console.log("PARAAAAAAAAAMS", parametrs);
+  console.log(styleOptions[parametrs.Style]["icons"]);
   const handleChange = (value) => {
     setSelectedStyle(value);
     setParametrs({ ...parametrs, [type]: value });
