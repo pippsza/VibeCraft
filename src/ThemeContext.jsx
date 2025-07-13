@@ -6,6 +6,7 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const localStorageTheme = "vibecraft_theme";
+  const localStorageKeys = "vibecraft_keys";
   const getInitialTheme = () => {
     try {
       const saved = localStorage.getItem(localStorageTheme);
@@ -35,6 +36,7 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     try {
       localStorage.setItem(localStorageTheme, JSON.stringify(theme));
+      localStorage.setItem(localStorageKeys, JSON.stringify(null));
     } catch (error) {
       console.error("Error saving theme to storage:", error);
     }

@@ -1,36 +1,26 @@
-import { iconStyleMap } from "../../tools/socialIconMap.js";
-import { styleOptions } from "../../tools/stylesCfg.js";
-import { useState, useEffect } from "react";
+import { useTheme } from "../../ThemeContext.jsx";
 
-export default function PreviewBox({ localTheme, parametrs }) {
-  const { palette, icons, typography } = localTheme;
-  const [localIcons, setLocalIcons] = useState(icons);
-  useEffect(() => {
-    setLocalIcons(parametrs.Icon);
-  }, [parametrs.Icon]);
-  const iconStyleName =
-    styleOptions[parametrs.Style].icons[localIcons] || "EmojiStyle";
-  const iconsMapped = iconStyleMap[iconStyleName] || iconStyleMap["EmojiStyle"];
+export default function PreviewBox() {
+  const { theme } = useTheme();
+  const { palette, icons, typography } = theme;
+
+  const iconsMapped = "EmojiStyle";
 
   return (
-    <div className="w-full flex flex-col gap-2 mb-2 bg-white  lg:gap-[15px] lg:mb-0">
-      <h3 className="text-[#7e7e7e] uppercase text-[13px] md:text-[15px] leading-[142%]">
-        preview
-      </h3>
+    <div className="w-full flex flex-col gap-2  bg-white  lg:gap-4 ">
+      <h3 className="text-[#7e7e7e] uppercase text-xs md:text-sm">preview</h3>
       <div
         style={{ fontFamily: typography }}
-        className="w-full h-[235px] lg:h-[162px] bg-white rounded-[10px] border-[1px] border-[#efefef] pt-[20px] px-[12px] text-sm md:text-base lg:pt-[31px] lg:px-[33px] lg:text-[18px]"
+        className="flex flex-col gap-3 w-full bg-white rounded-xl border-2 border-[#efefef] py-4 px-4 text-sm md:text-base  lg:text-base"
       >
-        <h2 className="mb-[6px] font-semibold text-[18px] tracking-[-0.02em] leading-[115%]">
-          Header Example
-        </h2>
-        <p className="font-medium text-[14px] tracking-[-0.02] leading-[146%] mb-[13px]">
+        <h2 className=" font-semibold text-sm ">Header Example</h2>
+        <p className="font-medium text-sm  ">
           This is how your body text would look with these colors.
         </p>
-        <div className="flex flex-col lg:flex-row gap-[9px] ">
+        <div className="flex flex-col md:flex-row gap-2 ">
           <button
             style={{ backgroundColor: palette[0] }}
-            className="w-[142px] hover:cursor-pointer h-[35px] text-[15px] tracking-[-0.02em] leading-[142%] font-semibold rounded-[10px] text-white transition"
+            className="w-36 hover:cursor-pointer h-9 text-base  font-semibold rounded-lg text-white transition"
             onMouseEnter={(e) =>
               (e.currentTarget.style.backgroundColor = palette[0] + "CC")
             }
@@ -46,7 +36,7 @@ export default function PreviewBox({ localTheme, parametrs }) {
               borderColor: palette[1],
               backgroundColor: palette[1] + "10",
             }}
-            className="w-[142px] hover:cursor-pointer h-[35px] text-[15px] tracking-[-0.02em] leading-[142%] font-semibold rounded-[10px] border-[1px] transition"
+            className="w-36 hover:cursor-pointer h-9 text-base font-semibold rounded-lg border-2 transition"
             onMouseEnter={(e) =>
               (e.currentTarget.style.backgroundColor = palette[1] + "20")
             }
@@ -56,7 +46,7 @@ export default function PreviewBox({ localTheme, parametrs }) {
           >
             Secondary
           </button>
-          <div className="flex">
+          <div className="grid md:grid-cols-4 grid-cols-[1fr_7fr]">
             {iconsMapped.github && (
               <span
                 onMouseEnter={(e) =>

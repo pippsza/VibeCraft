@@ -2,10 +2,14 @@ import { useTheme } from "../../ThemeContext.jsx";
 import toast from "react-hot-toast";
 import { colors } from "../../tools/stylesCfg";
 
-export default function PalleteBoxes({ localTheme, setParametrs, parametrs }) {
+export default function PalleteBoxes({ setParametrs, parametrs }) {
   const { theme } = useTheme();
-  const { typography } = theme;
-  const { palette } = localTheme;
+  const {
+    typography,
+    palette,
+    styleUtils: { borderRadius, borderWidth },
+  } = theme;
+
   const accent = palette[0];
   const categories = Object.keys(colors);
   const getAudiences = (category) =>
@@ -17,12 +21,10 @@ export default function PalleteBoxes({ localTheme, setParametrs, parametrs }) {
   return (
     <div
       style={{ fontFamily: typography }}
-      className="flex flex-col w-full lg:w-[520px] gap-[13px] mb-[25px]"
+      className="flex flex-col w-full  gap-3.5 "
     >
       <div className="flex justify-between">
-        <h3 className="text-[#7e7e7e] uppercase text-[15px] leading-[142%]">
-          color palette
-        </h3>
+        <h3 className="text-[#7e7e7e] uppercase text-base">color palette</h3>
         <button
           onClick={() => {
             const randomCategory = getRandom(categories);
@@ -33,12 +35,12 @@ export default function PalleteBoxes({ localTheme, setParametrs, parametrs }) {
               Audience: randomAudience,
             });
           }}
-          className="text-[13px] tracking-[-0.02em] leading-[164%] w-[141px] h-[35px] border-[1px] rounded-[8px] border-[#efefef] hover:cursor-pointer font-medium hover:bg-[rgba(241,91,181,0.15)] transition"
+          className="text-sm  h-9 border-2 w-36 rounded-lg border-[#efefef] hover:cursor-pointer font-medium hover:bg-[rgba(241,91,181,0.15)] transition"
         >
           Refresh Colors
         </button>
       </div>
-      <ul className="flex gap-x-[8px] gap-y-[10px]  flex-wrap">
+      <ul className="grid grid-cols-2 lg:grid-cols-3 gap-2">
         {palette.map((el, i) => {
           const label =
             i === 0 || i === 3
@@ -50,7 +52,7 @@ export default function PalleteBoxes({ localTheme, setParametrs, parametrs }) {
           return (
             <li
               key={i}
-              className="w-[168px] h-[106px] rounded-[10px] grid grid-rows-2 overflow-hidden transition-transform duration-200 hover:scale-105 cursor-pointer"
+              className={`w-full h-28 rounded-xl grid grid-rows-2 overflow-hidden transition-transform duration-200 hover:scale-105 cursor-pointer ${borderRadius} ${borderWidth}`}
               onClick={() => {
                 navigator.clipboard && navigator.clipboard.writeText(el);
                 toast.custom(
@@ -73,12 +75,8 @@ export default function PalleteBoxes({ localTheme, setParametrs, parametrs }) {
             >
               <div style={{ backgroundColor: el }}></div>
               <div className="bg-[#f8f8f8] p-[11px]">
-                <h5 className="text-[10px] tracking-[-0.02em] leading-[202%] font-medium">
-                  {label}
-                </h5>
-                <p className="text-[12px] text-[#787878] tracking-[-0.02em] leading-[170%]">
-                  {el}
-                </p>
+                <h5 className="text-sm  font-medium">{label}</h5>
+                <p className="text-xs text-[#787878] ">{el}</p>
               </div>
             </li>
           );

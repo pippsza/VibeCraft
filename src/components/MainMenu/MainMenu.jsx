@@ -14,12 +14,6 @@ export default function MainMenu() {
     Typography: "fourthFont",
     Icon: "thirdIcons",
   });
-  const changeLocalThemeHandler = () => {
-    const { Style, Audience, Category, Icon, Typography } = parametrs;
-    return generateTheme(Style, Category, Audience, Typography, Icon);
-  };
-
-  const [localTheme, setLocalTheme] = useState(changeLocalThemeHandler());
 
   const changeThemeHandler = () => {
     const { Style, Audience, Category, Icon, Typography } = parametrs;
@@ -27,22 +21,14 @@ export default function MainMenu() {
     changeTheme(Style, Category, Audience, Typography, Icon);
   };
 
-  useEffect(() => {
-    setLocalTheme(changeLocalThemeHandler());
-  }, [parametrs]);
-
   return (
-    <div class="container max-w-[1024px] mx-auto px-4 lg:px-8 grid grid-cols-2 grid-cols-[1fr_2fr] gap-x-6 justify-start">
+    <div className="container max-w-[1024px] mx-auto px-4 lg:px-8 grid mb-30 grid-rows-2 gap-y-6 lg:grid-cols-[1fr_2fr] gap-x-6 justify-center lg:justify-start">
       <Settings
         changeThemeHandler={changeThemeHandler}
         parametrs={parametrs}
         setParametrs={setParametrs}
       />
-      <SideCard
-        localTheme={localTheme}
-        setParametrs={setParametrs}
-        parametrs={parametrs}
-      />
+      <SideCard setParametrs={setParametrs} parametrs={parametrs} />
     </div>
   );
 }

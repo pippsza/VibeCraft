@@ -146,7 +146,7 @@ export const colors = {
 
 export const styleUtils = {
   fintech: {
-    borderWidth: "border-2",
+    borderWidth: "border-none",
     borderRadius: "rounded-xl",
     boxShadow: "shadow-lg",
     transition: "transition-shadow duration-300",
