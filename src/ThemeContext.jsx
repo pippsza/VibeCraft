@@ -33,10 +33,10 @@ export const ThemeProvider = ({ children }) => {
   };
 
   const [theme, setTheme] = useState(getInitialTheme);
+
   useEffect(() => {
     try {
       localStorage.setItem(localStorageTheme, JSON.stringify(theme));
-      localStorage.setItem(localStorageKeys, JSON.stringify(null));
     } catch (error) {
       console.error("Error saving theme to storage:", error);
     }
@@ -50,6 +50,16 @@ export const ThemeProvider = ({ children }) => {
     iconKey
   ) => {
     try {
+      localStorage.setItem(
+        localStorageKeys,
+        JSON.stringify({
+          styleKey,
+          categoryKey,
+          audienceKey,
+          typographyKey,
+          iconKey,
+        })
+      );
       const newTheme = generateTheme(
         styleKey,
         categoryKey,

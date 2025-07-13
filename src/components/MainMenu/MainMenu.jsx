@@ -3,17 +3,38 @@ import Container from "../Container/Container.jsx";
 import Settings from "../Settings/Settings.jsx";
 import SideCard from "../SideCard/SideCard.jsx";
 import { useTheme } from "../../ThemeContext.jsx";
-import generateTheme from "../../tools/styleBuilder.js";
 
 export default function MainMenu() {
   const { changeTheme } = useTheme();
-  const [parametrs, setParametrs] = useState({
-    Style: "classic",
-    Category: "fashion",
-    Audience: "youth",
-    Typography: "fourthFont",
-    Icon: "thirdIcons",
-  });
+  const getInitialKeys = () => {
+    const savedKeys = localStorage.getItem("vibecraft_keys");
+    if (savedKeys) {
+      try {
+        const parsed = JSON.parse(savedKeys);
+        const { styleKey, categoryKey, audienceKey, typographyKey, iconKey } =
+          parsed;
+        return {
+          Style: styleKey,
+          Category: categoryKey,
+          Audience: audienceKey,
+          Typography: typographyKey,
+          Icon: iconKey,
+        };
+      } catch (e) {
+        console.error("parsing errors:", e);
+      }
+    } else {
+      return {
+        Style: "classic",
+        Category: "fashion",
+        Audience: "youth",
+        Typography: "fourthFont",
+        Icon: "thirdIcons",
+      };
+    }
+  };
+
+  const [parametrs, setParametrs] = useState(getInitialKeys);
 
   const changeThemeHandler = () => {
     const { Style, Audience, Category, Icon, Typography } = parametrs;
