@@ -36,7 +36,7 @@ export default function Settings({ parametrs, setParametrs }) {
   return (
     <div
       style={{ fontFamily: typography }}
-      className={` w-full flex flex-col gap-5 px-4 py-4 h-full  font-medium p-8 ${borderWidth} ${borderRadius}`}
+      className={` w-full flex flex-col gap-5 px-4 py-4 h-full bg-white font-medium p-8 ${borderWidth} ${borderRadius}`}
     >
       <h3 className="font-semibold text-base lg:text-lg">Brand Parameters</h3>
       <DropDownBox parametrs={parametrs} setParametrs={setParametrs} />

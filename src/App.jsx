@@ -8,8 +8,10 @@ function App() {
     <>
       <Toaster />
       <Header />
-      <HeroSection />
-      <MainMenu />
+      <main>
+        <HeroSection />
+        <MainMenu />
+      </main>
     </>
   );
 }
