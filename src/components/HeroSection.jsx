@@ -1,7 +1,7 @@
-import { useTheme } from "../../ThemeContext.jsx";
-import Container from "../Container/Container.jsx";
-import Star from "../Star/Star.jsx";
-import Underline from "../UnderLine/UnderLine.jsx";
+import { useTheme } from "../ThemeContext.jsx";
+import Container from "./Container.jsx";
+import Star from "./Star.jsx";
+import Underline from "./UnderLine.jsx";
 
 export default function HeroSection() {
   const { theme } = useTheme();

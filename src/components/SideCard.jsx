@@ -1,7 +1,7 @@
-import { useTheme } from "../../ThemeContext.jsx";
-import InfoBoxes from "../InfoBoxes/InfoBoxes.jsx";
-import PalleteBoxes from "../PaletteBoxes/PaletteBoxes.jsx";
-import PreviewBox from "../PreviewBox/PreviewBox.jsx";
+import { useTheme } from "../ThemeContext.jsx";
+import InfoBoxes from "./InfoBoxes.jsx";
+import PaletteBoxes from "./PaletteBoxes.jsx";
+import PreviewBox from "./PreviewBox.jsx";
 
 export default function SideCard({ setParametrs, parametrs }) {
   const { theme } = useTheme();
@@ -17,7 +17,7 @@ export default function SideCard({ setParametrs, parametrs }) {
         Brand palette
       </h3>
       <InfoBoxes />
-      <PalleteBoxes setParametrs={setParametrs} parametrs={parametrs} />
+      <PaletteBoxes setParametrs={setParametrs} parametrs={parametrs} />
       <PreviewBox />
     </div>
   );

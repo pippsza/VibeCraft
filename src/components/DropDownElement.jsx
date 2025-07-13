@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { styleOptions, colors } from "../../tools/stylesCfg.js";
+import { styleOptions, colors } from "../tools/stylesCfg.js";
 import { Listbox } from "@headlessui/react";
-import { useTheme } from "../../ThemeContext.jsx";
-import { iconStyleMap } from "../../tools/socialIconMap.js";
+import { useTheme } from "../ThemeContext.jsx";
+import { iconStyleMap } from "../tools/socialIconMap.js";
 export default function StyleDropdown({ type, setParametrs, parametrs }) {
   const { theme } = useTheme();
   const { icons } = theme;
@@ -27,6 +26,7 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
       keys = Object.keys(styleOptions[parametrs.Style]["icons"]);
       break;
     default:
+      keys = [];
       break;
   }
 

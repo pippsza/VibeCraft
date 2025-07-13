@@ -1,6 +1,6 @@
-import { useTheme } from "../../ThemeContext.jsx";
-import DropDownBox from "../DropDownBox/DropDownBox.jsx";
-import { styleOptions, colors } from "../../tools/stylesCfg.js";
+import { useTheme } from "../ThemeContext.jsx";
+import DropDownBox from "./DropDownBox.jsx";
+import { styleOptions, colors } from "../tools/stylesCfg.js";
 
 export default function Settings({ parametrs, setParametrs }) {
   const { theme } = useTheme();

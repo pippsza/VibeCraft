@@ -1,4 +1,4 @@
-export default function Star({ size = 14, lgSize = 18 }) {
+export default function Star({ size, lgSize }) {
   return (
     <svg
       width={size}

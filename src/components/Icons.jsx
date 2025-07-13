@@ -1,5 +1,5 @@
-import { useTheme } from "../../ThemeContext.jsx";
-import { iconStyleMap } from "../../tools/socialIconMap.js";
+import { useTheme } from "../ThemeContext.jsx";
+import { iconStyleMap } from "../tools/socialIconMap.js";
 import { useState } from "react";
 
 export default function Icons() {

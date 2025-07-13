@@ -1,8 +1,8 @@
-import { useTheme } from "../../ThemeContext.jsx";
+import { useTheme } from "../ThemeContext.jsx";
 import toast from "react-hot-toast";
-import { colors } from "../../tools/stylesCfg";
+import { colors } from "../tools/stylesCfg";
 
-export default function PalleteBoxes({ setParametrs, parametrs }) {
+export default function PaletteBoxes({ parametrs, setParametrs }) {
   const { theme } = useTheme();
   const {
     typography,
@@ -29,11 +29,11 @@ export default function PalleteBoxes({ setParametrs, parametrs }) {
           onClick={() => {
             const randomCategory = getRandom(categories);
             const randomAudience = getRandom(getAudiences(randomCategory));
-            setParametrs({
-              ...parametrs,
+            setParametrs((prev) => ({
+              ...prev,
               Category: randomCategory,
               Audience: randomAudience,
-            });
+            }));
           }}
           className={`text-sm h-9 w-36 rounded-lg hover:cursor-pointer font-medium hover:bg-[rgba(241,91,181,0.15)] transition-transform duration-300 hover:scale-110 ${secondaryWidth}`}
         >

@@ -1,7 +1,7 @@
-import { useTheme } from "../../ThemeContext.jsx";
-import Icons from "../Icons/Icons.jsx";
-import Logo from "../Logo/Logo.jsx";
-import Navlist from "../Navlist/Navlist.jsx";
+import { useTheme } from "../ThemeContext.jsx";
+import Icons from "./Icons.jsx";
+import Logo from "./Logo.jsx";
+import Navlist from "./Navlist.jsx";
 
 export default function Header() {
   const {

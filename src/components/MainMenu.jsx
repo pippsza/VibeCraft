@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Container from "../Container/Container.jsx";
-import Settings from "../Settings/Settings.jsx";
-import SideCard from "../SideCard/SideCard.jsx";
-import { useTheme } from "../../ThemeContext.jsx";
+import Container from "./Container.jsx";
+import Settings from "./Settings.jsx";
+import SideCard from "./SideCard.jsx";
+import { useTheme } from "../ThemeContext.jsx";
 
 export default function MainMenu() {
   const {

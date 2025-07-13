@@ -1,4 +1,4 @@
-import { useTheme } from "../../ThemeContext.jsx";
+import { useTheme } from "../ThemeContext.jsx";
 
 export default function InfoBoxes() {
   const { theme } = useTheme();

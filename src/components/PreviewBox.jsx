@@ -1,7 +1,7 @@
-import { useTheme } from "../../ThemeContext.jsx";
-import { iconStyleMap } from "../../tools/socialIconMap.js";
+import { useTheme } from "../ThemeContext.jsx";
+import { iconStyleMap } from "../tools/socialIconMap.js";
 
-export default function PreviewBox() {
+export default function PreviewBox({ parametrs }) {
   const { theme } = useTheme();
   const { palette, icons, typography, styleUtils } = theme;
   const { secondaryWidth } = styleUtils;
