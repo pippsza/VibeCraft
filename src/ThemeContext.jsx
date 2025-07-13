@@ -23,7 +23,7 @@ export const ThemeProvider = ({ children }) => {
     } catch (error) {
       console.error("Error loading theme from storage:", error);
       return generateTheme(
-        "playful",
+        "modern",
         "fintech",
         "adults",
         "firstFont",
