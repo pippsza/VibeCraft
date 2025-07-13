@@ -28,7 +28,7 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
       keys = Object.keys(styleOptions[parametrs.Style]["typography"]);
       initialKey = parametrs.Typography;
       break;
-    case "Icons":
+    case "Icon":
       keys = Object.keys(styleOptions[parametrs.Style]["icons"]);
       initialKey = parametrs.Icon;
       break;
@@ -51,7 +51,7 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
           <Listbox.Button className="relative w-full h-9 cursor-pointer bg-white border-px border-solid rounded-lg border-[#efefef] text-left flex justify-between items-center px-3 transition hover:bg-[rgba(241,91,181,0.15)]">
             {type === "Typography"
               ? styleOptions[parametrs.Style]["typography"][selectedStyle]
-              : type === "Icons"
+              : type === "Icon"
               ? styleOptions[parametrs.Style]["icons"][selectedStyle]
               : selectedStyle}
             <iconsMapped.dropdown className="stroke-black" size={20} />
@@ -61,7 +61,7 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
               let label;
               if (type === "Typography") {
                 label = styleOptions[parametrs.Style]["typography"][styleKey];
-              } else if (type === "Icons") {
+              } else if (type === "Icon") {
                 label = styleOptions[parametrs.Style]["icons"][styleKey];
               } else {
                 label = styleKey;

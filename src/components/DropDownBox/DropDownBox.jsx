@@ -26,7 +26,7 @@ export default function DropDownBox({ parametrs, setParametrs }) {
       <Dropdown
         parametrs={parametrs}
         setParametrs={setParametrs}
-        type={"Icons"}
+        type={"Icon"}
       />
     </div>
   );
