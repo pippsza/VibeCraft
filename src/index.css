@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display&family=Georgia&family=Cormorant&family=Poppins&family=Inter&family=Rubik&family=Montserrat&family=Fredoka&family=Comic+Neue&family=Kalam&family=Libre+Baskerville&family=Lora&family=Cinzel&family=Cardo&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georgia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
+
 @import "tailwindcss";
 
 /* @tailwind base; */
