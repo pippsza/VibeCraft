@@ -9,7 +9,7 @@ export default function PreviewBox() {
   const iconsMapped = iconStyleMap[icons];
 
   return (
-    <div className="w-full flex flex-col gap-2  bg-white  lg:gap-4 ">
+    <div className="w-full flex flex-col gap-2  bg-white  lg:gap-4 animate-fade-in-up ">
       <h3 className="text-[#7e7e7e] uppercase text-xs md:text-sm">preview</h3>
       <div
         style={{ fontFamily: typography }}
@@ -57,7 +57,7 @@ export default function PreviewBox() {
                 onMouseLeave={(e) =>
                   (e.currentTarget.firstChild.style.stroke = "#000")
                 }
-                className="rounded-full p-1 transition flex items-center"
+                className="rounded-full p-1 transition-transform duration-300 hover:scale-110 flex items-center"
               >
                 <iconsMapped.github
                   className="stroke-black transition hover:cursor-pointer"
@@ -73,7 +73,7 @@ export default function PreviewBox() {
                 onMouseLeave={(e) =>
                   (e.currentTarget.firstChild.style.stroke = "#000")
                 }
-                className="rounded-full p-1 transition flex items-center"
+                className="rounded-full p-1 transition-transform duration-300 hover:scale-110 flex items-center"
               >
                 <iconsMapped.discord
                   className="stroke-black transition hover:cursor-pointer"
@@ -89,7 +89,7 @@ export default function PreviewBox() {
                 onMouseLeave={(e) =>
                   (e.currentTarget.firstChild.style.stroke = "#000")
                 }
-                className="rounded-full p-1 transition flex items-center"
+                className="rounded-full p-1 transition-transform duration-300 hover:scale-110 flex items-center"
               >
                 <iconsMapped.twitter
                   className="stroke-black transition hover:cursor-pointer"
@@ -105,7 +105,7 @@ export default function PreviewBox() {
                 onMouseLeave={(e) =>
                   (e.currentTarget.firstChild.style.stroke = "#000")
                 }
-                className="rounded-full p-1 transition flex items-center"
+                className="rounded-full p-1 transition-transform duration-300 hover:scale-110 flex items-center"
               >
                 <iconsMapped.reddit
                   className="stroke-black transition hover:cursor-pointer"

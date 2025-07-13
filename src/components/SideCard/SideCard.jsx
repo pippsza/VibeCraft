@@ -11,7 +11,7 @@ export default function SideCard({ setParametrs, parametrs }) {
   } = theme;
   return (
     <div
-      className={`w-full   flex flex-col gap-5 px-8 py-4  bg-white ${borderWidth} ${borderRadius}  `}
+      className={`w-full   flex flex-col gap-5 px-8 py-4  bg-white ${borderWidth} ${borderRadius} animate-fade-in-up`}
     >
       <h3 style={{ fontFamily: typography }} className="font-semibold text-lg">
         Brand palette

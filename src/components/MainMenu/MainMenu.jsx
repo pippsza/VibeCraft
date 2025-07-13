@@ -48,7 +48,7 @@ export default function MainMenu() {
   };
 
   return (
-    <div className=" relative container max-w-[1024px] mx-auto px-4 lg:px-8 grid mb-30 lg:grid-rows-1 grid-rows-2 gap-y-6 lg:grid-cols-[1fr_2fr] gap-x-6 justify-center lg:justify-start">
+    <div className=" relative container max-w-[1024px] mx-auto px-4 lg:px-8 grid mb-30 lg:grid-rows-1 grid-rows-2 gap-y-6 lg:grid-cols-[1fr_2fr] gap-x-6 justify-center lg:justify-start animate-fade-in-up ">
       <Settings parametrs={parametrs} setParametrs={setParametrs} />
       <SideCard setParametrs={setParametrs} parametrs={parametrs} />
       <div className="opacity-20 absolute w-full h-full -z-10">

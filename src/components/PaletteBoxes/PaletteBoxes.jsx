@@ -21,7 +21,7 @@ export default function PalleteBoxes({ setParametrs, parametrs }) {
   return (
     <div
       style={{ fontFamily: typography }}
-      className="flex flex-col w-full  gap-3.5 "
+      className="flex flex-col w-full  gap-3.5 animate-fade-in-up"
     >
       <div className="flex justify-between">
         <h3 className="text-[#7e7e7e] uppercase text-base">color palette</h3>
@@ -35,7 +35,7 @@ export default function PalleteBoxes({ setParametrs, parametrs }) {
               Audience: randomAudience,
             });
           }}
-          className={`text-sm h-9 w-36 rounded-lg hover:cursor-pointer font-medium hover:bg-[rgba(241,91,181,0.15)] transition ${secondaryWidth}`}
+          className={`text-sm h-9 w-36 rounded-lg hover:cursor-pointer font-medium hover:bg-[rgba(241,91,181,0.15)] transition-transform duration-300 hover:scale-110 ${secondaryWidth}`}
         >
           Refresh Colors
         </button>
