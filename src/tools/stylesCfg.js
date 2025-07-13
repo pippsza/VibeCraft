@@ -152,6 +152,7 @@ export const styleUtils = {
     transition: "transition-shadow duration-300",
     hover: "hover:shadow-xl",
     focus: "focus:outline-none focus:ring-4 focus:ring-pink-400",
+    secondaryWidth: "border-2 border-[#efefef]",
   },
   fashion: {
     borderWidth: "border",
@@ -160,6 +161,7 @@ export const styleUtils = {
     transition: "transition-transform duration-300",
     hover: "hover:scale-105",
     focus: "focus:outline-none focus:ring-2 focus:ring-purple-500",
+    secondaryWidth: "border-2 border-[#e0c3fc]",
   },
   food: {
     borderWidth: "border-4",
@@ -168,6 +170,7 @@ export const styleUtils = {
     transition: "transition-colors duration-200",
     hover: "hover:border-yellow-500",
     focus: "focus:outline-none focus:ring-2 focus:ring-yellow-400",
+    secondaryWidth: "border-2 border-[#ffd6a5]",
   },
   travel: {
     borderWidth: "border",
@@ -176,5 +179,6 @@ export const styleUtils = {
     transition: "transition-transform duration-300 ease-in-out",
     hover: "hover:-translate-y-1 hover:scale-105",
     focus: "focus:outline-none focus:ring-4 focus:ring-cyan-400",
+    secondaryWidth: "border-2 border-[#b8c0ff]",
   },
 };

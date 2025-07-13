@@ -3,7 +3,8 @@ import { iconStyleMap } from "../../tools/socialIconMap.js";
 
 export default function PreviewBox() {
   const { theme } = useTheme();
-  const { palette, icons, typography } = theme;
+  const { palette, icons, typography, styleUtils } = theme;
+  const { secondaryWidth } = styleUtils;
 
   const iconsMapped = iconStyleMap[icons];
 
@@ -12,7 +13,7 @@ export default function PreviewBox() {
       <h3 className="text-[#7e7e7e] uppercase text-xs md:text-sm">preview</h3>
       <div
         style={{ fontFamily: typography }}
-        className="flex flex-col gap-3 w-full bg-white rounded-xl border-2 border-[#efefef] py-4 px-4 text-sm md:text-base  lg:text-base"
+        className={`flex flex-col gap-3 w-full bg-white rounded-xl py-4 px-4 text-sm md:text-base lg:text-base ${secondaryWidth}`}
       >
         <h2 className=" font-semibold text-sm ">Header Example</h2>
         <p className="font-medium text-sm  ">

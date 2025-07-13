@@ -7,7 +7,7 @@ export default function PalleteBoxes({ setParametrs, parametrs }) {
   const {
     typography,
     palette,
-    styleUtils: { borderRadius, borderWidth },
+    styleUtils: { borderRadius, borderWidth, secondaryWidth },
   } = theme;
 
   const accent = palette[0];
@@ -35,7 +35,7 @@ export default function PalleteBoxes({ setParametrs, parametrs }) {
               Audience: randomAudience,
             });
           }}
-          className="text-sm  h-9 border-2 w-36 rounded-lg border-[#efefef] hover:cursor-pointer font-medium hover:bg-[rgba(241,91,181,0.15)] transition"
+          className={`text-sm h-9 w-36 rounded-lg hover:cursor-pointer font-medium hover:bg-[rgba(241,91,181,0.15)] transition ${secondaryWidth}`}
         >
           Refresh Colors
         </button>
