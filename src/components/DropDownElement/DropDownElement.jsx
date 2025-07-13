@@ -8,52 +8,43 @@ export default function StyleDropdown({ type, setParametrs, parametrs }) {
   const { icons } = theme;
   const iconsMapped = iconStyleMap[icons] || iconStyleMap["EmojiStyle"];
   let keys;
-  let initialKey;
   switch (type) {
     case "Style":
       keys = Object.keys(styleOptions);
-      initialKey = parametrs.Style;
       break;
     case "Category":
       keys = Object.keys(colors);
-      initialKey = parametrs.Category;
       break;
     case "Audience":
       keys = Object.keys(colors[parametrs.Category]).filter(
         (key) => typeof colors[parametrs.Category][key] === "object"
       );
-      initialKey = parametrs.Audience;
       break;
     case "Typography":
       keys = Object.keys(styleOptions[parametrs.Style]["typography"]);
-      initialKey = parametrs.Typography;
       break;
     case "Icon":
       keys = Object.keys(styleOptions[parametrs.Style]["icons"]);
-      initialKey = parametrs.Icon;
       break;
     default:
       break;
   }
-  const [selectedStyle, setSelectedStyle] = useState(initialKey);
-  console.log("PARAAAAAAAAAMS", parametrs);
-  console.log(styleOptions[parametrs.Style]["icons"]);
+
   const handleChange = (value) => {
-    setSelectedStyle(value);
     setParametrs({ ...parametrs, [type]: value });
   };
 
   return (
     <div className="w-full flex flex-col gap-2">
-      <Listbox value={selectedStyle} onChange={handleChange}>
+      <Listbox value={parametrs[type]} onChange={handleChange}>
         <p className=" text-sm">{type}</p>
         <div className="relative">
           <Listbox.Button className="relative w-full h-9 cursor-pointer bg-white border-px border-solid rounded-lg border-[#efefef] text-left flex justify-between items-center px-3 transition hover:bg-[rgba(241,91,181,0.15)]">
             {type === "Typography"
-              ? styleOptions[parametrs.Style]["typography"][selectedStyle]
+              ? styleOptions[parametrs.Style]["typography"][parametrs[type]]
               : type === "Icon"
-              ? styleOptions[parametrs.Style]["icons"][selectedStyle]
-              : selectedStyle}
+              ? styleOptions[parametrs.Style]["icons"][parametrs[type]]
+              : parametrs[type]}
             <iconsMapped.dropdown className="stroke-black" size={20} />
           </Listbox.Button>
           <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none">
